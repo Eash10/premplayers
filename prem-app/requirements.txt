@@ -12,4 +12,4 @@ dataclasses==0.8
 greenlet==1.1.1
 importlib-metadata==4.8.1
 typing-extensions==3.10.0.2
-zipp==3.50
+zipp==3.5.0

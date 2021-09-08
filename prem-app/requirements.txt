@@ -8,7 +8,7 @@ SQLAlchemy==1.4.23
 WTForms==2.3.3
 Werkzeug==2.0.1
 click==8.0.1
-dataclases==0.8
+dataclasses==0.8
 greenlet==1.1.1
 importlib-metadata==4.8.1
 typing-extensions==3.10.0.2

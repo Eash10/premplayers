@@ -9,5 +9,5 @@ class Teams(db.Model):
 class Players(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(30), nullable=False)
-    surname_name = db.Column(db.String(30), nullable=False)
+    surname = db.Column(db.String(30), nullable=False)
     team_id = db.Column(db.Integer, db.ForeignKey('teams`.id'), nullable=False)

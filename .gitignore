@@ -1,5 +1,0 @@
-/venv/
-*.pyc
-/__pycache__/
-/application/__pycache__/
-/application/data.db

@@ -51,3 +51,13 @@ def delplayer(id):
     db.session.delete(player_to_delete)
     db.session.commit()
     return redirect(url_for('players'))
+
+@app.route('/teams')
+def teams():
+    teams_data = Teams.query.all()
+    return render_template('teams.html', teams=teams_data)
+
+@app.route('/players')
+def players():
+    players_data = Players.query.all()
+    return render_template('players.html', players=players_data)

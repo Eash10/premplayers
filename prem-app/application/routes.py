@@ -37,3 +37,17 @@ def addplayer(id):
         db.session.commit()
         return redirect(url_for('players'))
     return render_template('addplayer.html', form=form)
+
+@app.route('/delteam/<int:id>')
+def delteam(id):
+    team_to_delete = Teams.query.filter_by(team_id=id).first()
+    db.session.delete(team_to_delete)
+    db.session.commit()
+    return redirect(url_for('teams'))
+
+@app.route('/delplayer/<int:id>')
+def delplayer(id):
+    player_to_delete = Players.query.filter_by(player_id=id).first()
+    db.session.delete(player_to_delete)
+    db.session.commit()
+    return redirect(url_for('players'))

@@ -8,13 +8,13 @@ class TeamsForm(FlaskForm):
     team_name = StringField('Team Name', 
         validators = [
             DataRequired(),
-            length(min=2, max=30)
+            Length(min=2, max=30)
         ] 
     )
     stadium = StringField('Stadium Name', 
         validators = [
             DataRequired(),
-            length(min=2, max=30)
+            Length(min=2, max=30)
         ] 
     )
 
@@ -24,13 +24,13 @@ class PlayersForm(FlaskForm):
     first_name = StringField('First Name', 
         validators = [
             DataRequired(),
-            length(min=2, max=30)
+            Length(min=2, max=30)
         ] 
     )
     surname = StringField('Surname Name', 
         validators = [
             DataRequired(),
-            length(min=2, max=30)
+            Length(min=2, max=30)
         ] 
     )
 
@@ -40,13 +40,13 @@ class UpdatePlayersForm(FlaskForm):
     first_name = StringField('First Name', 
         validators = [
             DataRequired(),
-            length(min=2, max=30)
+            Length(min=2, max=30)
         ] 
     )
     surname = StringField('Surname Name', 
         validators = [
             DataRequired(),
-            length(min=2, max=30)
+            Length(min=2, max=30)
         ] 
     )
 
@@ -56,13 +56,13 @@ class UpdateTeamsForm(FlaskForm):
     team_name = StringField('Team Name', 
         validators = [
             DataRequired(),
-            length(min=2, max=30)
+            Length(min=2, max=30)
         ] 
     )
     stadium = StringField('Stadium Name', 
         validators = [
             DataRequired(),
-            length(min=2, max=30)
+            Length(min=2, max=30)
         ] 
     )
 

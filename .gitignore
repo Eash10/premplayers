@@ -4,3 +4,4 @@
 /application/__pycache__/
 /application/data.db
 /application/.coverage/
+/application/test.db

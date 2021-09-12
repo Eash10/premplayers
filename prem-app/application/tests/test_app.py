@@ -5,7 +5,7 @@ from application.models import Teams, Players
 
 class TestBase(TestCase):
     def create_app(self):
-        app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///",
+        app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///test.db",
                 SECRET_KEY='TEST_SECRET_KEY',
                 DEBUG=True,
                 WTF_CSRF_ENABLED=False
@@ -22,3 +22,28 @@ class TestBase(TestCase):
     def tearDown(self):
         db.session.remove()
         db.drop_all()
+
+class TestViews(TestBase):
+    def test_home_get(self):
+        response = self.client.get(url_for('home'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_teams_get(self):
+        response = self.client.get(url_for('teams'))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Manchester United', response.data)
+    
+    def test_add_team_get(self):
+        response = self.client.get(url_for('addteam'))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Liverpool', response.data)
+    
+    # def test_home_get(self):
+    #     response = self.client.get(url_for('updateteam'))
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertIn(b'MsWoman', response.data)
+    
+    # def test_home_get(self):
+    #     response = self.client.get(url_for('home'))
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertIn(b'MsWoman', response.data)

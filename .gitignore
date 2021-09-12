@@ -5,3 +5,4 @@
 /application/data.db
 /application/.coverage/
 /application/test.db
+/.coverage/

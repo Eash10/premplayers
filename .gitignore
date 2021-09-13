@@ -2,7 +2,7 @@
 *.pyc
 /__pycache__/
 /application/__pycache__/
-/application/data.db
+/application/data.db/
 /application/.coverage/
-/application/test.db
+/application/test.db/
 /.coverage/
